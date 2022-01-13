@@ -1,5 +1,5 @@
 {
-  "name": "json-rules-engine",
+  "name": "@consejosano/json-rules-engine",
   "version": "6.1.0",
   "description": "Rules Engine expressed in simple json",
   "main": "dist/index.js",
@@ -9,14 +9,14 @@
     "test:types": "tsd",
     "lint": "standard --verbose --env mocha | snazzy || true",
     "lint:fix": "standard --fix --env mocha",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "build": "babel --stage 1 -d dist/ src/",
     "watch": "babel --watch --stage 1 -d dist/ src",
     "examples": "./test/support/example_runner.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cachecontrol/json-rules-engine"
+    "url": "https://github.com/consejosano/json-rules-engine"
   },
   "keywords": [
     "rules",
@@ -57,9 +57,9 @@
   "author": "Cache Hamm <cache.hamm@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cachecontrol/json-rules-engine/issues"
+    "url": "https://github.com/consejosano/json-rules-engine/issues"
   },
-  "homepage": "https://github.com/cachecontrol/json-rules-engine",
+  "homepage": "https://github.com/consejosano/json-rules-engine",
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
