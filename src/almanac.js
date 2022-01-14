@@ -127,6 +127,9 @@ export default class Almanac {
     const fact = this._getFact(factId)
     if (fact === undefined) {
       if (this.allowUndefinedFacts) {
+        if (path.includes('$.[')) {
+          return Promise.resolve([]);
+        }
         return Promise.resolve(undefined)
       } else {
         return Promise.reject(new UndefinedFactError(`Undefined fact: ${factId}`))
