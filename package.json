@@ -1,12 +1,12 @@
 {
   "name": "@consejosano/json-rules-engine",
-  "version": "6.1.5",
+  "version": "6.1.9",
   "description": "Rules Engine expressed in simple json",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "Xtest": "mocha && npm run lint --silent && npm run test:types",
-    "Xtest:types": "tsd",
+    "test": "mocha && npm run lint --silent && npm run test:types",
+    "test:types": "tsd",
     "lint": "standard --verbose --env mocha | snazzy || true",
     "lint:fix": "standard --fix --env mocha",
     "prepare": "npm run build",
