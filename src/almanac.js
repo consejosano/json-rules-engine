@@ -128,7 +128,7 @@ export default class Almanac {
     if (fact === undefined) {
       if (this.allowUndefinedFacts) {
         if (path.includes('$.[')) {
-          return Promise.resolve([]);
+          return Promise.resolve([])
         }
         return Promise.resolve(undefined)
       } else {

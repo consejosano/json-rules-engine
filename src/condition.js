@@ -103,7 +103,7 @@ export default class Condition {
             const result = op.evaluate(leftHandSideValue, rightHandSideValue)
             if (!leftHandSideValue && this.path.includes('$.[')) {
               leftHandSideValue = []
-            }  
+            }
             debug(`condition::evaluate <${JSON.stringify(leftHandSideValue)} ${this.operator} ${JSON.stringify(rightHandSideValue)}?> (${result})`)
             return { result, leftHandSideValue, rightHandSideValue, operator: this.operator }
           })
