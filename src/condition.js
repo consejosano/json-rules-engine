@@ -100,10 +100,10 @@ export default class Condition {
       .then(rightHandSideValue => {
         return almanac.factValue(this.fact, this.params, this.path)
           .then(leftHandSideValue => {
-            const result = op.evaluate(leftHandSideValue, rightHandSideValue)
             if (!leftHandSideValue && this.path.includes('$.[')) {
               leftHandSideValue = []
             }
+            const result = op.evaluate(leftHandSideValue, rightHandSideValue)
             debug(`condition::evaluate <${JSON.stringify(leftHandSideValue)} ${this.operator} ${JSON.stringify(rightHandSideValue)}?> (${result})`)
             return { result, leftHandSideValue, rightHandSideValue, operator: this.operator }
           })
