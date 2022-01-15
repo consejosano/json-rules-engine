@@ -1,9 +1,8 @@
 {
   "name": "@consejosano/json-rules-engine",
-  "version": "6.1.7",
+  "version": "6.1.8",
   "description": "Rules Engine expressed in simple json",
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "babel --stage 1 -d dist/ src/"
