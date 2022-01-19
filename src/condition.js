@@ -100,7 +100,7 @@ export default class Condition {
       .then(rightHandSideValue => {
         return almanac.factValue(this.fact, this.params, this.path)
           .then(leftHandSideValue => {
-            if (!leftHandSideValue && this.path.includes('$.[')) {
+            if (!leftHandSideValue && _this.path && this.path.includes('$.[')) {
               leftHandSideValue = []
             }
             const result = op.evaluate(leftHandSideValue, rightHandSideValue)
